@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning how to use SCSS</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
-    
+    <header class="mainHeader">
+        <h1>Learning how to use SCSS</h1>
+    </header>
+    <nav class="mainNav">
+        <ul>
+            <li><a href="#section1">section 1</a></li>
+        </ul>
+        <ul>
+            <li><a href="#section2">section 2</a></li>
+        </ul>
+        <ul>
+            <li><a href="#section3">section 3</a></li>
+        </ul>
+    </nav>
+    <section class="section-container" id="section1">
+       <header><h2>section 1</h2></header>
+       <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptatem sed, est eius quos tempora, provident totam minus illo itaque fugiat quis maiores incidunt voluptas dolor dolores quasi cum ut.</p>
+        <button class="buy-button" id="buy-button">køb nu</button>
+       </div>
+    </section>
+    <section class="section-container" id="section2">
+        <header><h2>Section 2</h2></header>
+        <div class="section">
+            <div class="section-text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium incidunt quaerat quisquam labore amet vitae ipsam nemo commodi deserunt dolor sequi nesciunt quos, maiores cupiditate nulla facere doloribus accusantium rem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quam aspernatur quisquam dolore totam, sit rem recusandae omnis blanditiis laudantium, quos nesciunt labore velit illum tempora. Nulla dolore velit illum.
+                </p>
+            </div>
+    </section>
+    <section class="section-container" id="section3">
+        <header><h2>Section 3</h2></header>
+        <div class="figure-section">
+        <figure class="images">
+            <img src="assets/images/section3.jpg" alt="Section 3 Image">
+        </figure>
+         <figure class="images">
+            <img src="assets/images/section3.jpg" alt="Section 3 Image">
+        </figure>
+         <figure class="images">
+            <img src="assets/images/section3.jpg" alt="Section 3 Image">
+        </figure>
+        </div>
+    </section>
+    <footer class="mainFooter">
+        <p>&copy; BeastTheNinja 2024 Learning how to use SCSS</p>
+    </footer>
 </body>
 </html>

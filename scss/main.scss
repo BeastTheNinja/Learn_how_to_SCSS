@@ -1,1 +1,137 @@
 // make cool stuff here
+// remember to compile to css
+// and link the css file in your html
+// make variables, mixins, nesting etc
+// have fun :)
+// #region Variables
+$maincolor: #1eff00;
+$background-color: #ff26268e;
+$accent-color: blue;
+$cta-color: red;
+$font-color: black;
+$font-family: 'Arial', sans-serif;
+$padding: 10px;
+$margin: 2rem;
+$border-radius: 5px;
+$border: 1px solid $accent-color;
+// #endregion Variables
+// #region global styles
+body {
+    background-color: $background-color;
+    color: $font-color;
+    font-family: $font-family;
+    padding: $padding;
+    margin: $margin;
+}
+// #endregion global styles
+// #region Header styles
+.mainHeader {
+    padding: $padding * 2;
+    text-align: center;
+    border-radius: $border-radius;
+    h1{
+        color: $font-color;
+    }
+}
+// #endregion Header styles
+// #region Navigation styles
+.mainNav {
+    padding: $padding;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        li {
+            a {
+                color: $font-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                        background-color: lighten($accent-color, 20%);
+                        color: $cta-color;
+                        border-radius: $border-radius;
+                        transition: background-color 0.2s, color 0.2s;
+                }
+                    &:active {
+                        background-color: $cta-color;
+                        color: white;
+                        border-radius: $border-radius;
+                    }
+            }
+        }
+    }
+}
+// #endregion Navigation styles
+// #region Section styles
+.section-container {
+    margin: $margin * 2 0;
+    padding: $padding * 2;
+    border-radius: $border-radius;
+    border: $border;
+    header {
+        text-align: center;
+        margin-bottom: $margin;
+        h2 {
+            color: $maincolor;
+        }
+    }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $margin;
+        align-items: center;
+    }
+    .buy-button{
+        background-color: $cta-color;
+        color: white;
+        border: none;
+        padding: $padding;
+        margin: auto;
+        border-radius: $border-radius;
+        cursor: pointer;
+        font-size: 1.2em;
+        &:hover {
+            background-color: darken($cta-color, 10%);
+            transition: background-color 0.2s;
+        }
+        &:active {
+            background-color: darken($cta-color, 20%);
+        }
+    }
+    .figure-section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .images{
+            max-width: 45%;
+            border-radius: $border-radius;
+            box-shadow: 0 4px 8px #0000001a;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px #0000001a;
+            }
+        }
+    }
+}
+// #endregion Section styles
+// #region Footer styles
+.mainFooter {
+    text-align: center;
+    padding: $padding;
+    border-top: $border;
+    margin-top: $margin * 2;
+    background-color: $accent-color;
+    p {
+        color: $font-color;
+        font-size: 0.9em;
+    }
+}
+// #endregion Footer styles
