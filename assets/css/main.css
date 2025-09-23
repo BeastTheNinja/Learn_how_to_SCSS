@@ -1,6 +1,6 @@
 body {
   background-color: rgba(255, 38, 38, 0.5568627451);
-  color: black;
+  color: #333;
   font-family: "Arial", sans-serif;
   padding: 10px;
   margin: 2rem;
@@ -9,15 +9,15 @@ body {
 .mainHeader {
   padding: 20px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .mainHeader h1 {
-  color: black;
+  color: #333;
 }
 
 .mainNav {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,27 +30,42 @@ body {
   justify-content: space-around;
 }
 .mainNav ul li a {
-  color: black;
+  color: #333;
   text-decoration: none;
 }
 .mainNav ul li a:hover {
   text-decoration: underline;
   background-color: #6666ff;
   color: red;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background-color 0.2s, color 0.2s;
 }
 .mainNav ul li a:active {
   background-color: red;
   color: white;
-  border-radius: 5px;
+  border-radius: 20px;
+}
+
+#section1 .content {
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+#section1 .content .buy-button {
+  justify-self: center;
+  margin-left: 0;
+}
+#section1 .content p {
+  font-size: 0.95em;
+  max-width: 100%;
 }
 
 .section-container {
-  margin: 4rem 0;
+  background-color: #ccccff;
+  border: 2px solid blue;
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 5px;
-  border: 1px solid blue;
+  margin: 4rem 0;
 }
 .section-container header {
   text-align: center;
@@ -61,7 +76,7 @@ body {
 }
 .section-container .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr auto;
   gap: 2rem;
   align-items: center;
 }
@@ -69,18 +84,23 @@ body {
   background-color: red;
   color: white;
   border: none;
-  padding: 10px;
-  margin: auto;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 40px;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  margin: auto;
 }
 .section-container .buy-button:hover {
   background-color: #cc0000;
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transform: scale(1.05);
 }
 .section-container .buy-button:active {
   background-color: #990000;
+  transform: scale(0.98);
 }
 .section-container .figure-section {
   display: flex;
@@ -89,7 +109,7 @@ body {
 }
 .section-container .figure-section .images {
   max-width: 45%;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
   transition: transform 0.2s;
 }
@@ -101,11 +121,11 @@ body {
 .mainFooter {
   text-align: center;
   padding: 10px;
-  border-top: 1px solid blue;
+  border-top: 2px solid blue;
   margin-top: 4rem;
   background-color: blue;
 }
 .mainFooter p {
-  color: black;
+  color: white;
   font-size: 0.9em;
 }/*# sourceMappingURL=main.css.map */

@@ -8,13 +8,62 @@ $maincolor: #1eff00;
 $background-color: #ff26268e;
 $accent-color: blue;
 $cta-color: red;
-$font-color: black;
 $font-family: 'Arial', sans-serif;
+$font-color: #333;
 $padding: 10px;
 $margin: 2rem;
-$border-radius: 5px;
-$border: 1px solid $accent-color;
+$border-radius: 20px;
+$border: 2px solid $accent-color;
 // #endregion Variables
+// #region mixins
+@mixin section-style($bg: lighten($accent-color, 40%), $border: $border, $radius: $border-radius) {
+    background-color: $bg;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding * 2;
+}
+
+@mixin grid-two-columns($gap: $margin) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $gap;
+    align-items: center;
+}
+
+@mixin buy-button-style($bg: $cta-color, $color: white) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    padding: $padding $padding * 2;
+    border-radius: $border-radius * 2;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    &:hover {
+        background-color: darken($bg, 10%);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        transform: scale(1.05);
+    }
+    &:active {
+        background-color: darken($bg, 20%);
+        transform: scale(0.98);
+    }
+}
+
+@mixin image-style($radius: $border-radius) {
+    max-width: 45%;
+    border-radius: $radius;
+    box-shadow: 0 4px 8px #0000001a;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px #0000001a;
+    }
+}
+
+// #endregion mixins
 // #region global styles
 body {
     background-color: $background-color;
@@ -69,11 +118,24 @@ body {
 }
 // #endregion Navigation styles
 // #region Section styles
+ #section1 {
+        .content {
+            grid-template-columns: 1fr 1fr;
+            gap: $margin * 2;
+            align-items: start;
+            .buy-button {
+                justify-self: center;
+                margin-left: 0;
+            }
+            p {
+                font-size: 0.95em;
+                max-width: 100%;
+            }
+        }
+    }
 .section-container {
+    @include section-style;
     margin: $margin * 2 0;
-    padding: $padding * 2;
-    border-radius: $border-radius;
-    border: $border;
     header {
         text-align: center;
         margin-bottom: $margin;
@@ -81,43 +143,19 @@ body {
             color: $maincolor;
         }
     }
-    .content{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: $margin;
-        align-items: center;
+    .content {
+        @include grid-two-columns;
     }
-    .buy-button{
-        background-color: $cta-color;
-        color: white;
-        border: none;
-        padding: $padding;
+    .buy-button {
+        @include buy-button-style;
         margin: auto;
-        border-radius: $border-radius;
-        cursor: pointer;
-        font-size: 1.2em;
-        &:hover {
-            background-color: darken($cta-color, 10%);
-            transition: background-color 0.2s;
-        }
-        &:active {
-            background-color: darken($cta-color, 20%);
-        }
     }
-    .figure-section{
+    .figure-section {
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        .images{
-            max-width: 45%;
-            border-radius: $border-radius;
-            box-shadow: 0 4px 8px #0000001a;
-            transition: transform 0.2s;
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px #0000001a;
-            }
+        .images {
+            @include image-style;
         }
     }
 }
@@ -130,7 +168,7 @@ body {
     margin-top: $margin * 2;
     background-color: $accent-color;
     p {
-        color: $font-color;
+        color: white;
         font-size: 0.9em;
     }
 }
