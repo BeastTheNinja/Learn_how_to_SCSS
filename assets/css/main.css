@@ -52,7 +52,7 @@ body {
 
 #section1 .content {
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 20rem;
   align-items: start;
 }
 #section1 .content .buy-button {
@@ -93,13 +93,13 @@ body {
   cursor: pointer;
   font-size: 1.1em;
   font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1215686275);
   transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
   margin: auto;
 }
 .section-container .buy-button:hover {
   background-color: #cc0000;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1803921569);
   transform: scale(1.05);
 }
 .section-container .buy-button:active {

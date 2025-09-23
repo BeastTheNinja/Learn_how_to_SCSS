@@ -34,11 +34,11 @@ $border: 2px solid $accent-color;
     cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px #0000001f;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
     &:hover {
         background-color: darken($bg, 10%);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        box-shadow: 0 4px 16px #0000002e;
         transform: scale(1.05);
     }
     &:active {
@@ -117,7 +117,7 @@ body {
  #section1 {
         .content {
             grid-template-columns: 1fr 1fr;
-            gap: $margin * 2;
+            gap: $margin * 10;
             align-items: start;
             .buy-button {
                 justify-self: center;
