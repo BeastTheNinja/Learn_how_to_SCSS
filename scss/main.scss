@@ -80,6 +80,7 @@ body {
 // #endregion Header styles
 // #region Navigation styles
 .mainNav {
+    @include section-style($bg: lighten($accent-color, 30%));
     padding: $padding;
     border-radius: $border-radius;
     display: flex;
