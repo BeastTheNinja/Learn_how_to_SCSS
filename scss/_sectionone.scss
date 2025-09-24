@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 #section1{
     display: flex;
     flex-direction: column;
@@ -10,7 +12,7 @@
         
         .buy-button {
             justify-self: center;
-            margin-right: $margin * 10; 
+            margin-right: $margin * 10;
         }
         
         p {

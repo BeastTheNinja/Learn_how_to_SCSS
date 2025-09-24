@@ -1,10 +1,12 @@
+@use 'variables' as *;
+
 .mainFooter {
     text-align: center;
     padding: $padding;
     border-top: $border;
     margin-top: $margin * 2;
     background-color: $accent-color;
-    
+
     p {
         color: white;
         font-size: 0.9em;

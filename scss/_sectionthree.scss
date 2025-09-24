@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 #section3 {
     .figure-section {
         display: grid;

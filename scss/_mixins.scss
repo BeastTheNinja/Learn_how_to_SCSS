@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use "sass:color";
+
 @mixin section-style($bg: $section-bg, $border: $border, $radius: $border-radius, $padding: $padding) {
     background-color: $bg;
     border: $border;
@@ -16,7 +19,7 @@
     background-color: $bg;
     color: $color;
     border: none;
-    padding: $padding $padding * 2;
+    padding: $padding ($padding * 2);
     border-radius: $border-radius * 2;
     cursor: pointer;
     font-size: 1.1em;
@@ -24,12 +27,12 @@
     box-shadow: 0 2px 8px #0000001f;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
     &:hover {
-        background-color: darken($bg, 10%);
+        background-color: color.scale($bg, $lightness: -10%);
         box-shadow: 0 4px 16px #0000002e;
         transform: scale(1.05);
     }
     &:active {
-        background-color: darken($bg, 20%);
+        background-color: color.scale($bg, $lightness: -20%);
         transform: scale(0.98);
     }
 }

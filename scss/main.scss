@@ -1,10 +1,7 @@
-@import 'variables';
-@import 'mixins';
-@import 'globalstyles';
-@import 'header';
-@import 'navbar';
-@import 'sections';
-@import 'sectionone';
-@import 'sectiontwo';
-@import 'sectionthree';
-@import 'footer';
+@use 'globalstyles';
+@use 'header';
+@use 'navbar';
+@use 'sections';
+@use 'sectionone';
+@use 'sectionthree';
+@use 'footer';
