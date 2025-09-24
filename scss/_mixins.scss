@@ -1,0 +1,46 @@
+@mixin section-style($bg: lighten($accent-color, 40%), $border: $border, $radius: $border-radius) {
+    background-color: $bg;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding * 2;
+}
+
+@mixin grid-two-columns($gap: $margin) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $gap;
+    align-items: center;
+}
+
+@mixin buy-button-style($bg: $cta-color, $color: white) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    padding: $padding $padding * 2;
+    border-radius: $border-radius * 2;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0000001f;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    &:hover {
+        background-color: darken($bg, 10%);
+        box-shadow: 0 4px 16px #0000002e;
+        transform: scale(1.05);
+    }
+    &:active {
+        background-color: darken($bg, 20%);
+        transform: scale(0.98);
+    }
+}
+
+@mixin image-style($radius: $border-radius) {
+    max-width: 45%;
+    border-radius: $radius;
+    box-shadow: 0 4px 8px #0000001a;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px #0000001a;
+    }
+}

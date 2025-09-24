@@ -1,0 +1,20 @@
+ 
+    .figure-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: $margin;
+        align-items: center;
+        padding: $padding;
+        .images {
+            @include image-style;
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: inherit;
+            }
+        }
+    }
