@@ -1,4 +1,4 @@
-@mixin section-style($bg: lighten($accent-color, 40%), $border: $border, $radius: $border-radius) {
+@mixin section-style($bg: $section-bg, $border: $border, $radius: $border-radius, $padding: $padding) {
     background-color: $bg;
     border: $border;
     border-radius: $radius;

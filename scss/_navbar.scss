@@ -1,5 +1,5 @@
 .mainNav {
-    @include section-style($bg: lighten($accent-color, 30%));
+    @include section-style($bg: $accent-color, $border: none);
     padding: $padding;
     border-radius: $border-radius;
     display: flex;
@@ -17,7 +17,7 @@
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
-                        background-color: lighten($accent-color, 20%);
+                        background-color: darken($accent-color, 10%);
                         color: $cta-color;
                         border-radius: $border-radius;
                         transition: background-color 0.2s, color 0.2s;
