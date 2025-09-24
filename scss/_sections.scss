@@ -2,7 +2,20 @@
     @include section-style;
     margin-top: $margin * 2;
     margin-bottom: $margin * 5;
+    
+    header {
+        text-align: center;
+        margin-bottom: $margin;
+        h2 {
+            color: $maincolor;
+        }
+    }
+    
     .content {
         @include grid-two-columns;
+    }
+    
+    .buy-button {
+        @include buy-button-style;
     }
 }
